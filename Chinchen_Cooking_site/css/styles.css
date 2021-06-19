@@ -1,9 +1,14 @@
 body {
-    margin:0;
-    font-family:houschka-pro, sans-serif;
+    margin:0 auto;
+    font-family:'helvetica-neue', sans-serif;
     background-color:#fff;
     overflow-x:hidden;
     overflow-y:auto;
+}
+
+img{
+    max-width:100%;
+    height:auto;
 }
 
 a{
@@ -12,26 +17,32 @@ a{
 
 p{
     font-family: houschka-pro, sans-serif;
+    font-size:1.5em;
     font-weight: 200;
     font-style: normal;
+    text-align:left;
     padding:0 .5rem;
+    margin:0 0 1em 0;
 }
 
 h1{
     font-family: houschka-pro, sans-serif;
     text-align:center;
+    margin:0;
+    padding:0;
 }
 
-.art{
-    font-family: kewl-script, sans-serif;
-    text-align:center;
+#croutons{
+    font-weight: 700;
+    margin:.5em 0;
 }
 
-.skill{
-    display:block;
+h2{
     font-family: houschka-pro, sans-serif;
-    font-weight: 200;
-    font-style: normal;
+    font-weight: 500;
+    font-style:normal;
+    text-align: center;
+    padding:0;
 }
 
 h3{
@@ -39,40 +50,51 @@ h3{
     font-weight: 500;
     font-style:normal;
     text-align: center;
-    margin:.5em 0 0 0;
+    margin:0;
     padding:0;
 }
 
-.highlight{
-    font-size:1em;
-    font-weight:800;
-    width:50vw;
-    display: block;
-    float:left;
-    border:2px solid #2C2C4E;
-    padding: .5em;
-    margin-left: 1em;
+h4{
+    font-family: houschka-pro, sans-serif;
+    font-weight: 500;
+    font-style:normal;
+    text-align: center;
+    margin:0;
+    padding:0;
 }
 
-.tagline{
-    font-family: kewl-script, sans-serif;
+marquee{
+    animation-delay:-5s;
+    margin:2em 0;
 }
 
-.crepes{
-    margin-top:-30px;
+.marquee{
+    margin:0 2em;
 }
 
+  @media screen and (min-width: 568px){
+iframe {
+      width:560px;
+      height:315px;
+  }
+}
+iframe{
+    display:block;
+    margin:1em auto;
+}
 /*----------Header & Nav----------*/
 .header {
     background-color:#2C2C4E;
-    box-shadow:1px 1px 4px 0 rgba(0,0,0,.1);
+    box-shadow:1px 1px 4px 0 #aaa;
     position:fixed;
     width:100%;
     z-index:3;
+    margin:0;
+    padding:0;
 }
 
 .header ul{
-    margin:0;
+    margin:1em;
     padding:0;
     list-style:none;
     overflow:hidden;
@@ -87,17 +109,34 @@ h3{
 }
 
 .header ul a:hover{
-    background-color:#8fbc8f;
+    color:#8fbc8f;
+    font-size:1.2em;
 }
 
 .header .logo{
+    float:left;
+    position:relative;
     display:block;
     font-family: italianno;
     text-decoration:none;
-    float:left;
-    font-size: 1.5em;
-    padding: 10px 20px;
+    padding: 2vw 5vw;
+    margin:.5em;
+    padding:0;
 }
+
+/* If the screen size is 568px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 568px) {
+ .header .logo {
+      font-size:3vw;
+    }
+  }
+  
+  /* If the screen size is 568px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 568px) {
+.header .logo{
+      font-size: 6vw;
+    }
+  }
 
 .header .menu{
     clear:both;
@@ -190,9 +229,8 @@ h3{
     overflow-y:auto;
 }
 
-img{
+.crepes{
     max-width:100%;
-    height:auto;
 }
 
 .container{
@@ -206,13 +244,45 @@ img{
     padding: 1em 0 0 0;
 }
 
+.highlight{
+    font-size:1.2em;
+    font-weight:bold;
+    width:60vw;
+    display: block;
+    float:left;
+    border:.2em solid #2C2C4E;
+    padding: .5em;
+    margin-left: 1em;
+}
+
+.tagline{
+    font-family: kewl-script, sans-serif;
+}
+
 .box{
     display:flex;
     flex-flow:column nowrap;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items: center;
+    text-align:center;
     width: 160px;
-    margin-bottom: 5em;
+    margin-bottom:4em;
+    overflow:hidden;
+}
+.box img{
+    display:block;
+    transition:.4s;
+}
+.box:hover img{
+    transform:scale(1.1);
+    transform-origin:50% 50%;
+}
+
+.box-p{
+    display:block;
+    margin:0 auto;
+    width:80vw;
+    
 }
 
 .box-monthly{
@@ -220,12 +290,112 @@ img{
     flex-flow:column nowrap;
     justify-content: space-between;
     padding:1em;
+    margin:0 auto 2em 0;
+    overflow:hidden;
+    width:75vw;
 }
 
 .box-adventure{
     background-color:#2C2C4E;
     width:100vw;
     padding:1rem;
+}
+
+.adventure{
+    color:#2C2C4E;
+    background-color:#fff;
+    padding:.5em 1em;
+    margin-right:10vw;
+    width:80vw;
+}
+
+.adventure-text{
+    color:#fff;
+    margin:1em 0;
+    font-family:houschka-pro, sans-serif;
+    font-weight:normal;
+}
+
+.box-interactive{
+    display:block;
+    flex-flow:column nowrap;
+    justify-content:space-around;
+    padding:1em;
+    margin:1em auto 1em 0;
+    overflow:hidden;
+    width:75vw;
+}
+
+.interactive{
+    font-family:houschka-pro, sans-serif;
+    font-weight:normal;
+    font-size:6vw;
+    text-align:left;
+    margin:0 0 -1em 0;
+}
+
+.interactive-text{
+    font-family:houschka-pro, sans-serif;
+    font-weight:100;
+    font-size:10vw;
+    text-align:left;
+    margin:.5em 0 0 0;
+}
+
+.box-coming{
+    display:block;
+    border:2px solid #DC6D35;
+    margin:0 1em;
+    overflow:hidden;
+}
+
+.box-coming img{
+    display:block;
+    transition:.4s;
+    margin:.5em auto;
+}
+
+.box-coming img:hover{
+    transform:scale(1.1);
+    transform-origin:50% 50%;
+}
+
+.box-coming ul{
+    margin:1em 0;
+}
+
+.box-coming ul li{
+    list-style-type:none;
+    margin:.5em 0;
+    padding:.5em;
+}
+
+.box-coming ul li a{
+    text-decoration: none;
+    font-family: houschka-pro, helvetica, sans-serif;
+    font-size:1.5em;
+    color:#2C2C4E;
+}
+.box-coming ul li a:hover{
+    text-decoration: underline;
+    transition: .2s;
+    color:#8fbc8f;
+}
+
+.art{
+    font-family: kewl-script, sans-serif;
+    font-weight:normal;
+    font-size:3em;
+    text-align:center;
+    margin:1em auto .5em auto;
+}
+
+.skill{
+    display:block;
+    font-family: houschka-pro, sans-serif;
+    font-size:10vw;
+    font-weight: 200;
+    font-style: normal;
 }
 
 .button{
@@ -240,50 +410,311 @@ img{
     text-decoration: none;
 }
 
-#kids{
-    border:1px solid #fff;
-}
-
 .button:hover{
     width:8rem;
     color:#DC6D35;
     border-radius: 6px;
 }
 
-.marquee{
-    margin:0 5em;
+.recipe-card{
+    padding:1em;
+    max-width:520px;
+    background-color:antiquewhite;
+    border-top:1px solid #DC6D35;
+    margin: 1em 0;
+    overflow:hidden;
 }
 
-.adventure-text{
-    color:#fff;
+#kids{
+    border:1px solid #fff;
 }
+
+#new-classes{
+    margin:.5em 0;
+}
+
+#box1{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: space-around;
+    width:350px;
+    overflow:hidden;
+    font-size:1em;
+    background-color:wheat;
+    padding:1em 0;
+    margin:1em;
+}
+
+#box1 img{
+    margin:1em auto 1em auto;
+}
+#box1 p{
+    font-size:1em;
+}
+
+#box2{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: space-around;
+    width:350px;
+    overflow:hidden;
+    font-size:1em;
+    background-color:wheat;
+    padding:1em 0;
+    margin:1em;
+}
+
+#box2 img{
+    margin:1em auto 1em auto;
+}
+#box2 p{
+    font-size:1em;
+}
+
+#box3{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: space-around;
+    width:350px;
+    overflow:hidden;
+    font-size:1em;
+    background-color:wheat;
+    padding:1em 0;
+    margin:1em;
+}
+
+#box3 img{
+    margin:1em auto 1em auto;
+}
+#box3 p{
+    font-size:1em;
+}
+
+#box4{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: space-around;
+    width:350px;
+    overflow:hidden;
+    font-size:1em;
+    background-color:wheat;
+    padding:1em 0;
+    margin:1em;
+}
+
+#box4 img{
+    margin:1em auto 1em auto;
+}
+#box4 p{
+    font-size:1em;
+}
+
+#box5{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: space-around;
+    width:350px;
+    overflow:hidden;
+    font-size:1em;
+    background-color:wheat;
+    padding:1em 0;
+    margin:1em;
+}
+
+#box5 img{
+    margin:1em auto 1em auto;
+}
+#box5 p{
+    font-size:1em;
+}
+
+#box6{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: space-around;
+    width:350px;
+    overflow:hidden;
+    font-size:1em;
+    background-color:wheat;
+    padding:1em 0;
+    margin:1em;
+}
+
+#box6 img{
+    margin:1em auto 1em auto;
+}
+#box6 p{
+    font-size:1em;
+}
+
+#box7{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: space-around;
+    width:350px;
+    overflow:hidden;
+    font-size:1em;
+    background-color:wheat;
+    padding:1em 0;
+    margin:1em;
+}
+
+#box7 img{
+    margin:1em auto 1em auto;
+}
+#box7 p{
+    font-size:1em;
+}
+
+#box8{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: space-around;
+    width:350px;
+    overflow:hidden;
+    font-size:1em;
+    background-color:wheat;
+    padding:1em 0;
+    margin:1em;
+}
+
+#box8 img{
+    margin:1em auto 1em auto;
+}
+#box8 p{
+    font-size:1em;
+}
+#box-contact{
+    width:350px;
+}
+
+/* The ingredient container */
+.ingredient-checklist{
+    background-color:cornsilk;
+    padding:1em;
+    margin:1em;
+}
+.ingredient-headline{
+    margin:1em auto;
+}
+
+.ingredient-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .ingredient-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .ingredient-container:hover:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .ingredient-container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .ingredient-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .ingredient-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
 /*----------footer----------*/
 footer {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin:3em 0 0 0;
+}
+
+.footer .box-hiring{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:space-around;
+    background-color:#DC6D35;
+    padding:1rem;
+    width:80vw;
 }
 
 .footer .hiring{
-    display:block;
-    background-color:#DC6D35;
-    padding:1rem;
+    font-family:Helvetica, sans-serif;
+    font-size:6vw;
+    font-weight:100;
+    color:#fff;
 }
 
+.footer .hiring-text{
+    font-family:houschka-pro, sans-serif;
+    font-size:2.8vw;
+    font-weight:normal;
+    color:#fff;
+    margin:1em auto;
+}
+.footer h3{
+    margin:1em auto 0 auto;
+}
 .footer h4{
     width:250px;
 }
 
-.social-buttons {
-    list-style-type: none;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    margin: 1em;
+.footer .find-more{
+    text-align:center;
+    color:#DC6D35;
 }
 
-ul.social-buttons {
-    margin: 1em 0;
+.footer ul{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-evenly;
+}
+
+.social-buttons ul li{
+    list-style-type:none;
 }
 
 .linkedin {
@@ -317,7 +748,8 @@ ul.social-buttons {
     opacity: 50%;
 }
 
-footer.copyright {
-    font-size: .75rem;
+.copyright {
+    font-size: .75em;
     color: #003366;
+    text-align:center;
 }

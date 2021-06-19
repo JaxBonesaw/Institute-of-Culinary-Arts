@@ -17,58 +17,71 @@
  
 <body>
 <header class="header">
-  <a href="/" class="logo">Institute of Culinary Arts</a>
+  <a href="../Chinchen_Cooking_site/index.html" class="logo">Institute of Culinary Arts</a>
   <input class="menu-btn" type="checkbox" id="menu-btn" />
   <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
   <ul class="menu">
     <li><a href="../Chinchen_Cooking_site/pages/classes.html">Classes</a></li>
-    <li><a href="pages/recipes">Recipes</a></li> 
-    <li><a href="pages/register">Register</a></li>
-    <li><a href="pages/contact">Contact Us</a></li>
+    <li><a href="../Chinchen_Cooking_site/pages/recipes.html">Recipes</a></li> 
+    <li><a href="../Chinchen_Cooking_site/pages/register.html">Register</a></li>
+    <li><a href="../Chinchen_Cooking_site/pages/contact.html">Contact Us</a></li>
 
   </ul>
 </header>
 
 <div class="wrapper">
-<img src="../Chinchen_Cooking_site/img/chopped.jpg" alt="chopped eggplant" style="width:100vw;">
-  <h1 class="art">The Art of Cooking</h1>
-  <h3>Learn to make the ordinary, extraordinary!</h3>
-  <p class="box-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in sagittis nunc. Sed tristique nibh non lacus euismod accumsan eu sit amet diam.</p>
-</div> 
+  
+  <div class="box-">
+    <img src="../Chinchen_Cooking_site/img/chopped.jpg" alt="chopped eggplant" style="width:100vw;">
+    <h1 class="art">The Art<br>of Cooking</h1>
+    <h2>Learn to make the ordinary, extraordinary!</h2>
+    <p class="box-p">The Art of Cooking offers short classes throughout the year in our well equipped facilities that rival the best five star kitchens of the world. Learn from the chefs who concoct the most savory fare at Bellingham’s local restaurants and eateries.</p>
+  </div> 
   
 <div class="container">
 
   <div class="box">
     <img src="../Chinchen_Cooking_site/img/stir150.jpg" alt="stirring food in a pan">
     <h4>In-Person Classes</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in sagittis nunc.</p>
+    <p>Soup and warm bread from the oven are a winning combo on a chilly evening.</p>
     <a class="button" href="pages/classes.html">In-Person</a>
   </div>
 
   <div class="box">
     <img src="../Chinchen_Cooking_site/img/tomato150.jpg" alt="Chopping food">
     <h4>Online Classes</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in sagittis nunc.</p>
+    <p>Experienced the magic of slow cookery, an evening designed to inspire.</p>
     <a class="button" href="pages/classes.html">Online</a>
   </div>
 
   <div class="box">
     <img src="../Chinchen_Cooking_site/img/chop150.jpg" alt="Chopping food">
     <h4>Private Events</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in sagittis nunc.</p>
+    <p>Take the mystery out of truffle-making in this hands-on class.</p>
     <a class="button" href="pages/classes.html">Private</a>
   </div>
 
   <div class="box">
     <img src="../Chinchen_Cooking_site/img/teaching150.jpg" alt="Chopping food">
     <h4>Institute of Culinary Arts: On Campus</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in sagittis nunc.</p>
+    <p>Chef An He Huan invites you to "Laissez les bons temps rouler"!</p>
     <a class="button" href="pages/classes.html">Campus</a>
+  </div>
+
+  <div class="box-coming">
+    <h1 id="new-classes">New classes coming<br>in Spring:</h1>
+    <img src="../Chinchen_Cooking_site/img/squeeze250.jpg" alt="Chopping food">
+    <ul>
+      <li><a href="#">French Bistro Dinner</a></li>
+      <li><a href="#">Cooking with Olive Oil</a></li>
+      <li><a href="#">Flavors of Spain: Tapas</a></li>
+      <li><a href="#">A Taste of Southeast Asia</a></li>
+    </ul>
   </div>
   
   <div class="box-monthly">
   <h3 class="highlight">MONTHLY HIGHLIGHT</h3>
-  <h1 class="skill">A NEW SKILL<br>&nbsp;&nbsp;&nbsp;&nbsp;A NEW YOU</h1>
+  <h1 class="skill">A NEW SKILL<br>&nbsp;&nbsp;&nbsp;A NEW YOU</h1>
   
   <marquee>
     <span class="marquee"><img src="../Chinchen_Cooking_site/img/tomato250.jpg" alt="Chopping tomatoes"></span>
@@ -82,16 +95,16 @@
   </div>
 
   <div class="box-adventure">
-    <h3 class="adventure-text">THE ULTIMATE COOKING ADVENTURE</h3>
-    <img src="../Chinchen_Cooking_site/img/kid560.jpg" alt="Chopping food">
+    <h3 class="adventure">THE ULTIMATE COOKING ADVENTURE</h3>
+    <img id="cooking-kid" src="../Chinchen_Cooking_site/img/kid560.jpg" alt="Chopping food">
     <h1 class="adventure-text">KIDS & TEENS<br>SUMMER SERIES</h1>
     <p class="adventure-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ante nisl, ultrices vitae condimentum a, convallis id eros. Ut congue erat quis leo efficitur, a lobortis massa suscipit.</p>
     <a class="button" id="kids" href="pages/classes.html">LEARN MORE</a>
   </div>
 
   <div class="box-interactive">
-    <h3>INTERACTIVE</h3>
-    <h1>ONLINE<br>COOKING<br>CLASSES</h1>
+    <h3 class="interactive">INTERACTIVE</h3>
+    <h1 class="interactive-text">ONLINE<br>COOKING<br>CLASSES</h1>
     
     <marquee>
       <span class="marquee"><img src="../Chinchen_Cooking_site/img/chef250.jpg" alt="Chef"></span>
@@ -106,23 +119,25 @@
 </div>
 <footer class="footer">
   
-  <div class="hiring">
-    <h3>WE'RE HIRING</h3>
-    <h4>FLEXIBLE SCHEDULE - LIVINING WAGE- UNION BENIFITS</h4>
+  <div class="box-hiring">
+    <h3 class="hiring">WE'RE HIRING</h3>
+    <p class="hiring-text">FLEXIBLE SCHEDULE - LIVING WAGE- UNION BENIFITS</p>
     <a class="button" href="pages/classes.html">LEARN MORE</a>
   </div>
     
   <div class="card">
       <h3 class="follow-me">Follow Me</h3>
-      <p class="blog-subtitle">Find More of My Work at These Links</p>
+      <p class="find-more">Find More of My Work at These Links</p>
   </div>
-
-  <ul class="social-buttons">
+  
+  <div class="social-buttons">
+    <ul>
       <li><a href="https://www.linkedin.com/in/josh-chinchen-7997378a" class="linkedin"><img src="../Chinchen_Cooking_site/img/In-2C-48px-R.jpg" alt="linkedin"></a></li>
       <li><a href="https://pin.it/1OaygzO" class="pinterest"><img src="../Chinchen_Cooking_site/img/pint-50px.jpg" alt="pinterest"></a></li>
       <li><a href="https://www.youtube.com/channel/UCFIFsrSrW1hfkKHuDa4h4dw" class="youtube"><img src="../Chinchen_Cooking_site/img/youtube-social-red.jpg" alt="youtube"></a></li>
       <li><a href="https://www.behance.net/DesignDrip" class="behance"><img src="../Chinchen_Cooking_site/img/behance.jpg" alt="behance"></a></li>
-  </ul>
+    </ul>
+  </div>
 
   <p class="copyright">Copyright 2021, Shift-Travel The World. All rights reserved 2021 ya fithy animals</p>
 </footer>
